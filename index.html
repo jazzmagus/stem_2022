@@ -50,7 +50,7 @@
 					<section>
 						<h2>Hello There v1</h2>
 						<p>
-							reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+							This presentation will $$x^2 - 3x + 2$$ you examples of what it can do.
 						</p>
 					</section>
 
@@ -467,6 +467,7 @@ Reveal.on( 'customevent', function() {
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="/plugin/math/math.js"></script>
 		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/search/search.js"></script>
@@ -477,13 +478,27 @@ Reveal.on( 'customevent', function() {
 			// Also available as an ES module, see:
 			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+				backgroundTransition: 'none',
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
 
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
+
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+				plugins: [ RevealMath, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
 		</script>
