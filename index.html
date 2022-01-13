@@ -1,21 +1,53 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<title>Concorso Ordinario 2022</title>
 
-		<title>reveal.js</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="D!ego Fantinelli">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/serif.css">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+				
+				<section>
+					<h2 class="r-fit-text">CONCORSO </h2>
+					<h2 class="r-fit-text">ORDINARIO</h2>
+				</section>
+
+				<section data-transition="zoom" data-background-opacity="0.5" data-background="https://source.unsplash.com/1920x1080/?blurred">					
+					<h2>Concorso Ordinario 2021</h2>
+					<h1 class="fragment fade-in">Continuità e Derivabilità</h1>
+					<h2 class="fragment fade-in">per funzioni reali di variabile reale</h2>
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p><small>candidato: <a href="mailto:diego.fantinelli@gmail.com">diego fantinelli</a> | <b>data: </b>20 agosto 2021 | C.d.C.: A026 | <a href="/img/reveal.js - Math Plugin.pdf"><span class="material-icons">download</span><b>pdf</b></a></small
+					></p>
+				</section>
+
 				<section>Slide 1</section>
 				<section>Slide 2</section>
 				<section>Slide 3</section>
@@ -29,19 +61,42 @@
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="../plugin/math/math.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+				backgroundTransition: 'none',
+				controls: true,
+				progress: true,
+				center: true,
 				hash: true,
 
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
+
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMath, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
+
 		</script>
+
 	</body>
 </html>
+
