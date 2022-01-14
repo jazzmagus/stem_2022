@@ -30,7 +30,7 @@
 			<div class="slides">
 				<section>
 					<a href="https://revealjs.com">
-						<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+			<!--			<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> -->
 					</a>
 					<h3>Concorso Ordinario - STEM 2022</h3>
 					<h2>candidato: Diego Fantinelli</h2>
@@ -59,7 +59,7 @@
 					</section>
 					<section>
 						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<p>Nested slides are useful $3x^2 - e^x$ for adding additional detail underneath a high level horizontal slide.</p>
 					</section>
 					<section>
 						<h2>Basement Level 2</h2>
@@ -454,6 +454,7 @@ Reveal.on( 'customevent', function() {
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
@@ -462,13 +463,16 @@ Reveal.on( 'customevent', function() {
 			// Also available as an ES module, see:
 			// https://revealjs.com/initialization/
 			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+				backgroundTransition: 'none',
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+				plugins: [ RevealZoom, RevealMath, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
 		</script>
